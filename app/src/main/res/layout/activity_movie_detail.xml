@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/movie_detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="@string/title" />
+
+            <ImageView
+                android:id="@+id/movie_detail_thumbnail"
+                android:layout_width="140dp"
+                android:layout_height="230dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/movie_detail_title"
+                android:contentDescription="@string/poster_thumbnail"
+                app:srcCompat="@mipmap/ic_launcher" />
+            <TextView
+                android:id="@+id/movie_detail_description"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/movie_detail_thumbnail"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="@string/description"/>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movie_detail_description"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:id="@+id/radio_group">
+
+                <RadioButton
+                    android:id="@+id/radio_button_already_seen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/already_seen"
+                    android:onClick="alreadySeen"/>
+
+                <RadioButton
+                    android:id="@+id/radio_button_want_to_see"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/want_to_see"
+                    android:onClick="wantToSee"/>
+
+                <RadioButton
+                    android:id="@+id/radio_button_do_not_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/do_not_like"
+                    android:onClick="doNotLike"/>
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radio_group"
+                android:text="@string/submit" />
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
