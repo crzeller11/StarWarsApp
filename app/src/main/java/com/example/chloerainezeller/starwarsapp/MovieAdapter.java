@@ -98,7 +98,6 @@ public class MovieAdapter extends BaseAdapter {
             mainCharacterTextView.setText(movie.mainCharacters);
             mainCharacterTextView.setTextSize(14);
 
-            // FIXME: do I do this in the adapter? Where is this supposed to go?
             hasSeenTextView.setTextSize(11);
             hasSeenTextView.setTextColor(ContextCompat.getColor(mContext, R.color.black));
 
@@ -111,7 +110,6 @@ public class MovieAdapter extends BaseAdapter {
 
     }
 
-    // FIXME: Make sure that the radio button display is included here, not sure if these are ALL the components of the ViewHolder
     private static class ViewHolder {
       public TextView titleTextView;
       public TextView descriptionTextView;

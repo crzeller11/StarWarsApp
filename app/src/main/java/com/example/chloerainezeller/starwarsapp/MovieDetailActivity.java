@@ -34,20 +34,14 @@ public class MovieDetailActivity extends AppCompatActivity {
         submitButton = findViewById(R.id.submit_button);
 
         String title = this.getIntent().getExtras().getString("title");
-
         String posterUrl = this.getIntent().getExtras().getString("url");
-        System.out.println("MOVIE DETAIL ACTIVITY: POSTER URL FOUND IN INTENT FROM MAIN ACTIVITY:");
-        System.out.println(posterUrl);
         String description = this.getIntent().getExtras().getString("description");
 
         setTitle(title);
 
         mTitleView = findViewById(R.id.movie_detail_title);
-
         mThumbnailView = findViewById(R.id.movie_detail_thumbnail);
-
         mDescriptionView = findViewById(R.id.movie_detail_description);
-
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override

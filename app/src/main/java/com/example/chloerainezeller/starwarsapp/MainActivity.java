@@ -14,7 +14,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-// FIXME: Make sure that the changes to activity movie detail are interpolated in the code
 public class MainActivity extends AppCompatActivity {
 
     private ListView mListView;
